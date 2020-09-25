@@ -4,14 +4,20 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int heightM = 171;
-        int heightF = 172;
-        int combined = heightF + heightM;
-        int divided = combined / 2;
-        int predicted = (int) (divided - 12.7);
-        System.out.println(predicted);
 
+        int heightM = 171; // This is your mother's height in centimetres
+        int heightF = 172; // This is your father's height in centimetres
+        int combined = heightF + heightM; // Combines your mother's and father's height
+        int divided = combined / 2; // Divides combined by 2
 
+        String gender = "male"; // gender must equal male or female.
+        if (gender.equalsIgnoreCase("male")) { // Checks without caring for case if gender is equal to male.
+            int predicted = (int) (divided + 12.7); // The maths required to predict adult height for males.
+            System.out.println(predicted); // Prints it out.
+        } else if (gender.equalsIgnoreCase("female")) { // Checks without caring for case if gender is equal to female.
+            int predicted = (int) (divided - 12.7); // The maths required to predict adult height for females.
+            System.out.println(predicted); // Prints it out.
+        }
 
     }
 }
